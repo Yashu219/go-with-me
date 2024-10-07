@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go to Sringeri with Me?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Will you go to Sringeri with me?</h1>
+        <div class="buttons">
+            <button id="yes-btn">Yes, I'd love to!</button>
+            <button id="no-btn">No, sorry 😔</button>
+        </div>
+    </div>
+
+    <script>
+        // Adding a fun interaction when the "No" button is hovered or clicked
+        const noBtn = document.getElementById('no-btn');
+        noBtn.addEventListener('mouseover', () => {
+            const randomX = Math.floor(Math.random() * window.innerWidth) - 50;
+            const randomY = Math.floor(Math.random() * window.innerHeight) - 20;
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = `${randomX}px`;
+            noBtn.style.top = `${randomY}px`;
+        });
+    </script>
+</body>
+</html>
