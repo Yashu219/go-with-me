@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Go to Sringeri with Me?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Will you go to Sringeri with me?</h1>
+    <div class="buttons">
+      <button id="yes-btn">Yes, I'd love to!</button>
+      <button id="no-btn">No, sorry 😔</button>
+    </div>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById('yes-btn');
+    const noBtn = document.getElementById('no-btn');
+
+    yesBtn.addEventListener('click', () => {
+      yesBtn.textContent = "Yay! 💖";
+      alert("Can't wait to go to Sringeri with you! 🥰");
+    });
+
+    noBtn.addEventListener('mouseover', () => {
+      const maxX = window.innerWidth - noBtn.offsetWidth;
+      const maxY = window.innerHeight - noBtn.offsetHeight;
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
+      noBtn.style.position = 'absolute';
+      noBtn.style.left = `${randomX}px`;
+      noBtn.style.top = `${randomY}px`;
+    });
+  </script>
+</body>
+</html>
