@@ -1,67 +1,79 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
+/* Page background */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f8f9fa;
-    background-image: url('https://www.sringeri.net/wp-content/uploads/2020/10/temple.jpg');
-    background-size: cover;
-    background-position: center;
-    background-blur: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://www.sringeri.net/wp-content/uploads/2020/10/temple.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
+/* Frosted glass container */
 .container {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-size: 2.5rem;
-    color: #ff69b4;
-    margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #ff69b4;
+  margin-bottom: 30px;
 }
 
 .buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 
 button {
-    padding: 15px 25px;
-    font-size: 1.2rem;
-    border-radius: 50px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
 }
 
 #yes-btn {
-    background-color: #ff69b4;
-    color: white;
+  background-color: #ff69b4;
+  color: white;
 }
-
 #yes-btn:hover {
-    background-color: #ff85c1;
+  background-color: #ff85c1;
 }
 
 #no-btn {
-    background-color: #ccc;
-    color: #333;
+  background-color: #ccc;
+  color: #333;
+}
+#no-btn:hover {
+  background-color: #ff85c1;
+  color: white;
+  cursor: default;
 }
 
-#no-btn:hover {
-    background-color: #ff85c1;
-    color: white;
-    cursor: default;
+/* Image and hide/show classes */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+.hidden {
+  display: none;
 }
