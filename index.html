@@ -9,6 +9,11 @@
 <body>
   <div class="container">
     <h1>Will you go to Sringeri with me?</h1>
+
+    <!-- 🎯 Place these images in the HTML, not in JS -->
+    <img id="happy-img" src="Sringeri.jpg" alt="Temple at Sringeri" class="responsive-image"/>
+    <img id="sad-img" src="cry.jpg" alt="Sad face" class="responsive-image hidden"/>
+
     <div class="buttons">
       <button id="yes-btn">Yes, I'd love to!</button>
       <button id="no-btn">No, sorry 😔</button>
@@ -18,14 +23,13 @@
   <script>
     const yesBtn = document.getElementById('yes-btn');
     const noBtn = document.getElementById('no-btn');
+    const happyImg = document.getElementById('happy-img');
+    const sadImg = document.getElementById('sad-img');
 
     yesBtn.addEventListener('click', () => {
       yesBtn.textContent = "Yay! 💖";
       alert("Can't wait to go to Sringeri with you! 🥰");
     });
-    <img id="happy-img" src="Sringeri.jpg" alt="Temple at Sringeri" class="responsive-image"/>
-<img id="sad-img" src="cry.jpg" alt="Sad face" class="responsive-image hidden"/>
-
 
     noBtn.addEventListener('mouseover', () => {
       const maxX = window.innerWidth - noBtn.offsetWidth;
@@ -35,6 +39,11 @@
       noBtn.style.position = 'absolute';
       noBtn.style.left = `${randomX}px`;
       noBtn.style.top = `${randomY}px`;
+    });
+
+    noBtn.addEventListener('click', () => {
+      happyImg.classList.add('hidden');
+      sadImg.classList.remove('hidden');
     });
   </script>
 </body>
