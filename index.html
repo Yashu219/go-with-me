@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Go to Sringeri with Me?</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go With Me?</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Will you go to Sringeri with me?</h1>
-
-    <!-- Just one image that changes when "No" is clicked -->
-    <img id="main-img" src="Sringeri.jpg" alt="Temple at Sringeri" class="responsive-image"/>
-
-    <div class="buttons">
-      <button id="yes-btn">Yes, I'd love to!</button>
-      <button id="no-btn">No, sorry 😔</button>
+    <div class="container">
+        <h1>Will you go with me?</h1>
+        <div class="buttons">
+            <button id="yes-btn">Yes</button>
+            <button id="no-btn">No</button>
+        </div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <script>
+        const yesBtn = document.getElementById("yes-btn");
+        const noBtn = document.getElementById("no-btn");
+
+        yesBtn.addEventListener("click", () => {
+            yesBtn.textContent = "Yay! 💖";
+            alert("Yay! I'm so happy!");
+        });
+
+        noBtn.addEventListener("mouseover", () => {
+            // Move the No button randomly
+            const x = Math.floor(Math.random() * window.innerWidth);
+            const y = Math.floor(Math.random() * window.innerHeight);
+            noBtn.style.position = "absolute";
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        });
+    </script>
 </body>
 </html>
